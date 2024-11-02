@@ -16,14 +16,14 @@
       crossorigin
       src="https://unpkg.com/@babel/standalone/babel.min.js"
     ></script>
-    <link rel="stylesheet" href="../CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="text/babel" src="../JS/component.common.js"></script>
-    <script type="text/babel" src="../JS/filter.js"></script>
-    <script type="text/babel" src="../JS/script_card.js"></script>
+    <script type="text/babel" src="JS/component.common.js"></script>
+    <script type="text/babel" src="JS/filter.js"></script>
+    <script type="text/babel" src="JS/script_card.js"></script>
     <script type="text/babel">
      class App extends React.Component {
        constructor(props) {
@@ -35,7 +35,7 @@
        }
      
        componentDidMount() {
-         fetch("../JSON/data.pies.json")
+         fetch("JSON/data.pies.json")
            .then((response) => response.json())
            .then((data) => {
              this.setState({ cardsData: data });

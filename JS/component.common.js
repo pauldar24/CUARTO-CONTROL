@@ -21,27 +21,27 @@ const Navigation = () => {
         <img src="../IMAGENES/PÁGINA/logo.jpeg"/>
         <ul className="flex space-x-4 justify-center">
           <li>
-            <a href="../HTML/index.html" className="text-white hover:text-blue-400">
+            <a href="../index.html" className="text-white hover:text-blue-400">
               Inicio
             </a>
           </li>
           <li>
-            <a href="../HTML/products.html" className="text-white hover:text-blue-400">
+            <a href="../products.html" className="text-white hover:text-blue-400">
               Productos
             </a>
           </li>
           <li>
-            <a href="../HTML/contacto.html" className="text-white hover:text-blue-400">
+            <a href="../contacto.html" className="text-white hover:text-blue-400">
               Contacto
             </a>
           </li>
           <li>
-            <a href="../HTML/about.html" className="text-white hover:text-blue-400">
+            <a href="../about.html" className="text-white hover:text-blue-400">
               Nosotros
             </a>
           </li>
           <li>
-            <a href="../HTML/novedades.html" className="text-white hover:text-blue-400">
+            <a href="../novedades.html" className="text-white hover:text-blue-400">
               Novedades
             </a>
           </li>
