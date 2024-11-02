@@ -18,7 +18,7 @@ const Formulario = () => {
       Email:
     </label>
     <input
-      type="text"
+      type="email"
       id="email"
       placeholder="futsite@gmail.com"
       className="w-full p-2 border border-gray-300 rounded"
@@ -30,17 +30,16 @@ const Formulario = () => {
     >
       Mensaje:
     </label>
-    <textarea
+    <input
+      type="text"
       id="message"
       placeholder="Escríbenos..."
       className="w-full p-2 border border-gray-300 rounded"
-    ></textarea>
+    ></input>
 
-    <input
-      type="button"
-      value="ENVIAR"
-      className="w-full py-2 bg-yellow-500 text-white rounded hover:bg-yellow-700"
-    />
+    <button
+      value="button"
+      className="w-full py-2 bg-yellow-500 text-white rounded hover:bg-yellow-700">ENVIAR</button>
   </form>
   );
 };
