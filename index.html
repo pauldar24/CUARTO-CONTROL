@@ -33,7 +33,7 @@
         }
 
         componentDidMount() {
-          fetch("data.pies.json")
+          fetch("data.json")
             .then((response) => response.json())
             .then((data) => {
               this.setState({ cardsData: data });
