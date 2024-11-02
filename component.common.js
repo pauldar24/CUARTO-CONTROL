@@ -3,7 +3,7 @@ const Welcome = () => {
     <div className="p-6 text-center">
       <h1 className="text-blue-900 text-7xl font-bold m-5">FutSite</h1>
       <img
-        src="../IMAGENES/PÁGINA/camisetas.jpeg"
+        src="IMAGENES/PÁGINA/camisetas.jpeg"
         alt="camisetas"
         loading="lazy"
         className="mx-auto mb-4 rounded-lg shadow-md w-1/2 m-7"
