@@ -8,12 +8,15 @@ body {
   line-height: 1.6;
   color: #333;
   display: flex;
+  flex-wrap: wrap;
   flex-direction:column;
   min-height: 100vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-color: #F4F2E1;
+  width: 100%;
+  overflow-x: hidden;
 }
 header,
 nav,
@@ -50,6 +53,7 @@ nav ul {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 nav ul li a {
   color: white;
@@ -81,18 +85,18 @@ div button {
   display:grid;
   place-items: center;
 }
-button {
+button#btn-pro {
   border-radius: 15px;
   width:330px;
   height:50px;
   padding:8px;
-  margin:70px;
+  margin:70px auto;
   font-size: 18px;
   background-color: #F0B941;
   border:none;
   font-weight: 600;
 }
-button:hover{
+button#btn-pro:hover{
   background-color: #E7C886;
 }
 button a {
@@ -100,25 +104,108 @@ button a {
   color: black;
 }
 .productRow{
-  width: 300px;
+  width: 90%;
+  max-width: 300px;
   height: 375px;
   display: inline-block;
   place-items: center;
-  margin: 50px 30px 5px 130px;
-  background-color: #F0B941;
+  margin: 20px auto;
+  background-color: #ffffff;
+  box-shadow: 4px 10px 15px 5px;
   border-radius: 40px;
-  border: solid;
   text-align: center;
-}  
-.parrfInicio {
-  font-size: 25px;
-  text-align: center;
-  font-weight:700;
+  position: relative;
+  text-decoration: transparent;
+  transition-duration: 300ms;
+}
+.productRow:hover {
+  opacity: 0.5;
+}
+.productRow p:hover{
+  font-weight: 800;
+  text-decoration: white;
+}
+.information{
+  font-weight: 700;
 }
 .product-img {
+  display: flex;
   border-radius: 25px;
   margin:25px;
+  padding: 0;
   margin-bottom: 5px;
   height: 260px;
   place-items: center;
+  object-position: center;
+}
+
+@media (min-width: 768px){
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  .productRow {
+    display: inline-block;
+    place-items: center;
+    margin: 50px 30px 5px 130px;
+    background-color: #ffffff;
+    box-shadow: 4px 10px 15px 5px;
+    border-radius: 40px;
+    text-align: center;
+    position: relative;
+    text-decoration: transparent;
+    transition-duration: 300ms;
+  }
+  #div-modal{
+    width: 50%;
+  }
+  #btn-detail{
+    width: 100%;
+  }
+  #img-modal{
+    width: 100%;
+  }
+  #img-inicio {
+    width: 505;
+  }
+  #nov img {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+@media (max-width: 800px){
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  nav ul {
+    flex-direction: flex;
+  }
+
+  .productRow {
+    display: grid;
+    align-items: center;
+    justify-items:center;
+  }
+  #div-modal {
+    width: 100%;
+  }
+  #btn-detail {
+    width: 50%;
+  }
+  #img-modal{
+    width:50%;
+  }
+  #img-inicio{
+    width:100%;
+  }
+  #nov img {
+    width: 100%;
+    height: 100%;
+  }
 }

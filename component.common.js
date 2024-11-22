@@ -2,7 +2,7 @@ const Welcome = () => {
   return (
     <div className="p-6 text-center">
       <h1 className="text-blue-900 text-7xl font-bold m-5">FutSite</h1>
-      <img
+      <img id="img-inicio"
         src="IMAGENES/PÁGINA/camisetas.jpeg"
         alt="camisetas"
         loading="lazy"
@@ -96,7 +96,7 @@ const About = () => {
 
 const Novedades = () => {
   return (
-  <main class="flex-grow p-4">
+  <main class="flex-grow p-4" id="nov">
   <h1 class="text-blue-900 text-4xl font-bold m-5">Últimas Camisetas</h1>
   <ul className="list-disc pl-6 list-none text-center">
       <li className="text-lg font-bold py-3">FC Barcelona Tercer equipación 2024 - S/250

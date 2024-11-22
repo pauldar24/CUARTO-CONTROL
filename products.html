@@ -23,7 +23,7 @@
     <div id="root"></div>
     <script type="text/babel" src="component.common.js"></script>
     <script type="text/babel" src="filter.js"></script>
-    <script type="text/babel" src="script_card.js"></script>
+    <script type="text/babel" src="script.card.js"></script>
     <script type="text/babel" src="modal.js"></script>
     <script type="text/babel">
      class App extends React.Component {
@@ -32,6 +32,8 @@
          this.state = {
            cardsData: [],
            filter: 'all',
+           isModalOpen: false,
+           selectedProduct: null,
          };
        }
      
@@ -47,9 +49,23 @@
        handleFilterChange = (category) => {
          this.setState({ filter: category });
        };
+
+       handleOpenModal = (product) => {
+          this.setState({
+            isModalOpen: true,
+            selectedProduct: product,
+          });
+        };
+
+        handleCloseModal = () => {
+          this.setState({
+            isModalOpen: false,
+            selectedProduct: null,
+          });
+        };
      
        render() {
-         const { cardsData, filter } = this.state;
+         const { cardsData, filter, isModalOpen, selectedProduct } = this.state;
      
          const filteredCards = cardsData.filter(card => {
            return filter === 'all' || card.category === filter;
@@ -62,7 +78,24 @@
              <div className="flex justify-center mt-0">
              <Filter onFilterChange={this.handleFilterChange} />
              </div>
-             <CardList cardsData={filteredCards} />
+             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+                {filteredCards.map((card, index) => (
+                  <Card
+                    key={index}
+                    src={card.src}
+                    title={card.title}
+                    description={card.description}
+                    price={card.price}
+                    category={card.category}
+                    onOpenModal={this.handleOpenModal}
+                  />
+                ))}
+              </div>
+              <Modal
+                isOpen={isModalOpen}
+                onClose={this.handleCloseModal}
+                product={selectedProduct}
+              />
              <div className="flex-grow mt-9"></div>
              <Footer />
            </div>
