@@ -151,7 +151,7 @@ button a {
   .productRow {
     display: inline-block;
     place-items: center;
-    margin: 50px 30px 5px 130px auto;
+    margin: 50px 30px 5px 130px;
     background-color: #ffffff;
     box-shadow: 4px 10px 15px 5px;
     border-radius: 40px;
