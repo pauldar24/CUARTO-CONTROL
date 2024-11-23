@@ -1,6 +1,5 @@
 const Card = ({ category, srcimagen, title, description, price }) => {
   return (
-    <div className="inicio-pro">
     <div class="productRow" data-category={category}>
         <button className="w-full h-5/6 transparent"><a href="products.html">
           
@@ -11,7 +10,6 @@ const Card = ({ category, srcimagen, title, description, price }) => {
       <div class="information" className="m-0">
         <h5 class="product-information">{title}</h5>
       </div>
-    </div>
     </div>
   );
 };
