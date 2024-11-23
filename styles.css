@@ -104,6 +104,7 @@ button a {
   color: black;
 }
 .productRow{
+  display:inline-block;
   width: 90%;
   max-width: 300px;
   height: 375px;
