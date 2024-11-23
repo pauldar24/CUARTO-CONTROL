@@ -178,7 +178,7 @@ button a {
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 800px){
   header h1 {
     font-size: 1.8rem;
   }
