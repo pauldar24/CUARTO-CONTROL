@@ -188,7 +188,7 @@ button a {
   }
 
   .productRow {
-    display: flex;
+    display: grid;
     align-items: center;
     justify-items:center;
   }
